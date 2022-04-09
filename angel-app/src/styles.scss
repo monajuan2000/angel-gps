@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; max-width: 100%; max-height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '~@angular/material/theming';
+
+
+@mixin theme-color-grabber($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .main-container{
+    width: 100%;
+  }
+  .menu-container{
+    margin: 5px;
+  }
+  .main-menu {
+    background-color: mat-color($primary);
+    font-family: 'italic';
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .card{
+    background-color: mat-color($accent);
+    height: 100px;
+    margin: 30px;
+  }
+}

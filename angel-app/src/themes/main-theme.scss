@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import '../styles.scss';
+
+$my-theme-primary: mat.define-palette(mat.$indigo-palette, 400);
+$my-theme-secondary: mat.define-palette(mat.$pink-palette, A200);
+$my-palette-theme: mat.define-light-theme((
+ color: (
+   primary: $my-theme-primary,
+   accent: $my-theme-secondary,
+ )
+));
+@include mat.all-component-themes($my-palette-theme);
+@include theme-color-grabber($my-palette-theme);
