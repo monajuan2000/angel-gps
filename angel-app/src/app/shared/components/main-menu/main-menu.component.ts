@@ -11,5 +11,8 @@ export class MainMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public saludar(){
+    console.log("hola")
+  }
 
 }

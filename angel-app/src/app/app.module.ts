@@ -8,11 +8,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './shared/components/home/home.component';
+import { MainLogoComponent } from './shared/components/main-logo/main-logo.component';
+import { HomeCardOneComponent } from './shared/components/home-cards/home-card-one/home-card-one.component';
+import { HomeCardTwoComponent } from './shared/components/home-cards/home-card-two/home-card-two.component';
+import { HomeCardThreeComponent } from './shared/components/home-cards/home-card-three/home-card-three.component';
+import { HomeCardFourComponent } from './shared/components/home-cards/home-card-four/home-card-four.component';
+import { CustomerInformationComponent } from './shared/components/customer-information/customer-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
+    HomeComponent,
+    MainLogoComponent,
+    HomeCardOneComponent,
+    HomeCardTwoComponent,
+    HomeCardThreeComponent,
+    HomeCardFourComponent,
+    CustomerInformationComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +35,9 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

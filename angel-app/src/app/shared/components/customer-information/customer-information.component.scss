@@ -1,0 +1,8 @@
+@import '/src/styles.scss';
+
+.customer-info-card-two{
+    @extend.w-120;
+    @extend.b-r-20;
+    @extend.flex-center;
+    color: white;
+}
