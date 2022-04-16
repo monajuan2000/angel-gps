@@ -6,9 +6,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 @mixin theme-color-general($theme) {
+
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
+
+  .blue-700{
+    background-color: mat-color($warn);
+  }
+  .pink-900{
+    background-color: mat-color($accent);
+  }
+
+   // ---------------------------------------------------------HOME - COMPONENT----------------------------------------------------------------
 
   .main-container{
     @extend.w-100;
@@ -26,11 +36,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .main-menu {
     background-color: mat-color($primary);
     font-family: 'italic';
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    bottom: 0;
-    position: fixed;
+    @extend.color-white;
+    @extend.position-fixed-end;
+    @extend.flex-space-around;
     z-index: 1000;
   }
   .card_one{
@@ -41,7 +49,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     @extend.m-10_30;
     @extend.b-r-20;
     @extend.flex-center-complete;
-    color: white;
+    @extend.color-white;
   }
   .card_two{
     background-color: mat-color($warn);
@@ -51,7 +59,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     @extend.m-10_30;
     @extend.b-r-20;
     @extend.flex-center-complete;
-    color: white;
+    @extend.color-white;
   }
   .card_three{
     background-color: mat-color($accent);
@@ -61,7 +69,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     @extend.m-10_30;
     @extend.b-r-20;
     @extend.flex-center-complete;
-    color: white;
+    @extend.color-white;
   }
   .card_four{
     background-color: mat-color($warn);
@@ -72,11 +80,52 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     @extend.b-r-20;
     @extend.m-b-100;
     @extend.flex-center-complete;
-    color: white;
+    @extend.color-white;
   }
-  .blue-700{
+
+  // ---------------------------------------------------------LOGIN - COMPONENT----------------------------------------------------------------
+
+
+  .logo-login{
+    @extend.flex-center;
+    margin-top: 50%;
+  }
+  .card-login-general{
+    @extend.flex-center;
+    margin-top: 50px;
+  }
+  .card-login-one{
+    @extend.m-20_0;
+    @extend.w-320;
+    @extend.b-r-20;
+    @extend.flex-center-complete;
+    background-color: mat-color($accent);
+    @extend.h-card-15;
+    @extend.color-white;
+  }
+  .card-login-two{
+    @extend.m-20_0;
+    @extend.w-320;
+    @extend.b-r-20;
+    @extend.flex-center-complete;
     background-color: mat-color($warn);
+    @extend.h-card-15;
+    @extend.color-white;
   }
+  .card-login-logo-general{
+   @extend.flex-center;
+   @extend.position-absolute-end;
+  }
+  .input-login{
+    @extend.w-320;
+  }
+  .buttons-login{
+    @extend.m-t-20;
+    @extend.flex-center;
+  }
+}
+.mat-card:active{
+  background-color: grey !important;
 }
 
 // ---------------------------------------------------------VARIABLES----------------------------------------------------------------
@@ -99,6 +148,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .h-card-100{
   height: 100px;
 }
+.h-card-15{
+  height: 15px;
+}
+
 .h-max-100{
   max-height: 100%;
 }
@@ -127,6 +180,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .m-10_30{
   margin: 10px 30px;
 }
+.m-20_0{
+  margin: 20px 0px;
+}
+
+// ---------------------------------------------------------MARGIN-LEFT----------------------------------------------------------------
+
+.m-l-10px{
+  margin-left: 10px !important;
+}
+
+// ---------------------------------------------------------MARGIN-RIGHT----------------------------------------------------------------
+
+.m-r-10px{
+  margin-right: 10px !important;
+}
 
 // ---------------------------------------------------------BORDER-RADIUS----------------------------------------------------------------
 .b-r-20{
@@ -142,6 +210,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-bottom: 20px;
 }
 
+// ---------------------------------------------------------MARGIN-TOP----------------------------------------------------------------
+
+.m-t-20{
+  margin-top: 20px;
+}
 // ---------------------------------------------------------BACKGROUND-IMAGE----------------------------------------------------------------
 
 .background-image-general{
@@ -152,11 +225,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // ---------------------------------------------------------FLEX----------------------------------------------------------------
 
 .flex-center{
-  display: flex;
+  display: flex !important;
   justify-content: center;
+}
+.flex-space-around{
+  display: flex !important;
+  justify-content: space-around;
 }
 .flex-center-complete{
   display: flex !important;
   justify-content: center;
   align-items: center;
+}
+
+// ---------------------------------------------------------POSITIONS----------------------------------------------------------------
+.position-absolute-end{
+  position: absolute;
+  bottom: 0;
+}
+.position-fixed-end{
+  bottom: 0;
+  position: fixed;
+}
+
+// ---------------------------------------------------------TEXT----------------------------------------------------------------
+.color-white{
+  color: white !important;
 }

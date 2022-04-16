@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
 
+  routesMainComponent = {homeRoute: '../security/login'}
+
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-  public saludar(){
-    console.log("hola")
   }
 
 }

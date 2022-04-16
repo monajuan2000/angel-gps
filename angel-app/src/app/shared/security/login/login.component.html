@@ -1,0 +1,57 @@
+<div class="main-container">
+  <div fxLayout="row wrap" fxLayoutGap="grid">
+    <div class="logo-login" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <img src="/assets/images/LOGO_LOGIN.png" fxFlex="75%" />
+    </div>
+    <div
+    *ngIf="!getStateUser"
+      class="card-login-general"
+      fxFlex="100%"
+      fxFlex.sm="100%"
+      fxFlex.xs="100%"
+    >
+      <button (click)="changeStatusUser()" class="main-button">
+        <mat-card class="card-login-one"> USUARIO </mat-card>
+      </button>
+    </div>
+
+    <div *ngIf="getStateUser" class="card-login-general" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <mat-form-field appearance="fill" class="input-login">
+        <mat-label>Escriba su usuario</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="!getStatePass" class="flex-center" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <button (click)="changeStatusPass()" class="main-button">
+        <mat-card class="card-login-two"> CONTRASEÑA </mat-card>
+      </button>
+    </div>
+
+    <div *ngIf="getStatePass" class="flex-center" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <mat-form-field appearance="fill" class="input-login">
+        <mat-label>Escriba su contraseña</mat-label>
+        <input matInput type="password">
+      </mat-form-field>
+    </div>
+    
+    <div class="flex-center" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+      ¿OLVIDO SU CONTRASEÑA?
+    </div>
+
+    
+    <div *ngIf="getStatePass || getStateUser" class="buttons-login" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <button mat-button class="m-r-10px color-white blue-700">Guardar</button>
+      <button (click)="clean()" mat-button class="m-l-10px color-white pink-900">Cancelar</button>
+    </div>
+
+    <div
+      class="card-login-logo-general"
+      fxFlex="100%"
+      fxFlex.sm="100%"
+      fxFlex.xs="100%"
+    >
+      <img src="/assets/images/ANGEL_LOGO.png" fxFlex="40%" />
+    </div>
+  </div>
+</div>
