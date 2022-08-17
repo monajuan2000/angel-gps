@@ -18,7 +18,8 @@ public class PersonServiceImp extends PersonMapper implements PersonService {
    public Mono<PersonModel> findByUsername(String username) {
       return Mono.just(
               this.convertToModel(
-                      this.personRepository.findByUsername(username))
+                      this.personRepository.findByUsername(username)
+                              )
       );
    }
 
