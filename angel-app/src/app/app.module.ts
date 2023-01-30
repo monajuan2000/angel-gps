@@ -17,6 +17,8 @@ import { HomeCardFourComponent } from './shared/components/home-cards/home-card-
 import { CustomerInformationComponent } from './shared/components/customer-information/customer-information.component';
 import { LoginComponent } from './shared/security/login/login.component';
 import {MatInputModule} from '@angular/material/input';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { LocationComponent } from './shared/users/location/location.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import {MatInputModule} from '@angular/material/input';
     HomeCardFourComponent,
     CustomerInformationComponent,
     LoginComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {MatInputModule} from '@angular/material/input';
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
