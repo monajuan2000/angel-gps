@@ -1,6 +1,12 @@
 .main-button{
-    background-color: transparent; 
+    background-color: transparent;
     border-width: 0
+}
+.logo-general{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 mat-label{
     color: black;
