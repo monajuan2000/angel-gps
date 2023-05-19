@@ -1,0 +1,40 @@
+.contacts{
+  font-family: italic;
+}
+
+.button-emergency{
+  background-color: red;
+}
+
+.flex-center-left{
+  display: flex !important;
+  justify-content: left;
+  align-items: center;
+}
+
+.flex-center-right{
+  display: flex !important;
+  justify-content: right;
+  align-items: center;
+}
+
+#container-flex{
+ margin-top: 30px !important;
+ margin: 3px;
+}
+
+#contacts-toolbar{
+  font-family: italic;
+  font-style: oblique;
+  font-size: medium;
+}
+
+#buttons{
+  margin-top: 10px;
+}
+
+.contacts-toolbar-padding{
+  border: 20px;
+}
+
+

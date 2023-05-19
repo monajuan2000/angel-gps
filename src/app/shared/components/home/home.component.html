@@ -25,7 +25,7 @@
     <div fxFlex="100%" fxFlex.sm="100%">
       <div fxLayout="row wrap" fxLayoutGap="grid">
         <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
-          <app-home-card-three></app-home-card-three>
+          <a [routerLink]="['/users/components/contacts']"><app-home-card-three></app-home-card-three></a>
         </div>
         <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
           <a [routerLink]="['/users/location']"><app-home-card-four></app-home-card-four></a>

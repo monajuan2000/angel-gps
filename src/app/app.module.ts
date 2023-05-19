@@ -19,6 +19,7 @@ import { LoginComponent } from './shared/security/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { LocationComponent } from './shared/users/location/location.component';
+import { ContactsComponent } from './shared/users/components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LocationComponent } from './shared/users/location/location.component';
     CustomerInformationComponent,
     LoginComponent,
     LocationComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,

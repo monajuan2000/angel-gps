@@ -83,6 +83,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     @extend.color-white;
   }
 
+  .cards-contacts{
+    @extend.background-image-general;
+    background-image: var(--background-01);
+    margin: 5px;
+  }
+
   // ---------------------------------------------------------LOGIN - COMPONENT----------------------------------------------------------------
 
 
