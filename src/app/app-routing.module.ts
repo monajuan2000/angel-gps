@@ -7,15 +7,15 @@ import { LocationComponent } from './shared/users/location/location.component';
 import { ContactsComponent } from './shared/users/components/contacts/contacts.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'security/login', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent, canActivate:[VigilantGuard]},
-  {path: 'security/login', component: LoginComponent},
-  {path: 'users/location', component: LocationComponent},
-  {path: 'users/components/contacts', component: ContactsComponent},
+  { path: '', redirectTo: 'security/login', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, canActivate: [VigilantGuard] },
+  { path: 'security/login', component: LoginComponent },
+  { path: 'users/location', component: LocationComponent },
+  { path: 'users/components/contacts', component: ContactsComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

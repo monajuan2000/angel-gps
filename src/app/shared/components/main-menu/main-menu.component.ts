@@ -3,16 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss']
+  styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent implements OnInit {
+  routesMainComponent = { homeRoute: '../security/login' };
 
-  routesMainComponent = {homeRoute: '../security/login'}
+  constructor() {}
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

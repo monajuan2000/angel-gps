@@ -3,25 +3,22 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-location',
   templateUrl: './location.component.html',
-  styleUrls: ['./location.component.scss']
+  styleUrls: ['./location.component.scss'],
 })
 export class LocationComponent implements OnInit {
-
-  title = 'angel-gps-map'
+  title = 'angel-gps-map';
 
   position = {
-   lat: 6.1997056,
-   lng: -75.5892224
-  }
+    lat: 6.1997056,
+    lng: -75.5892224,
+  };
 
   label = {
     color: 'red',
-    text: 'Marcador'
-  }
+    text: 'Marcador',
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
